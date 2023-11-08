@@ -4,9 +4,6 @@ on:
   pull_request:
     branches:
       - main
-      - alpha
-      - beta
-      - gamma
     types: [closed]
 
 jobs:
@@ -19,5 +16,5 @@ jobs:
         uses: actions/checkout@v2
 
       - name: Update Version
-        run: ./.github/scripts/versioning.sh
+        run: ../.github/scripts/versioning.sh
         shell: bash
