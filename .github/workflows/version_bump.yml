@@ -20,3 +20,4 @@ jobs:
 
       - name: Update Version
         run: ./.github/scripts/versioning.sh
+        shell: bash
