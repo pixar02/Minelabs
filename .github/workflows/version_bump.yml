@@ -1,0 +1,22 @@
+name: A-Update Version and Tag on Merge
+
+on:
+  pull_request:
+    branches:
+      - main
+      - alpha
+      - beta
+      - gamma
+    types: [closed]
+
+jobs:
+  update-version:
+    runs-on: ubuntu-latest
+    if: github.event.pull_request.merged == true
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Update Version
+        run: ./.github/scripts/versioning.sh
