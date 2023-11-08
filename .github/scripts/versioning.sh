@@ -1,4 +1,6 @@
-#!/bin/bash -e
+#!/bin/bash
+
+set -x
 
 # Increment the version
 CURRENT_VERSION=$(grep "mod_version" gradle.properties | cut -d'=' -f2 | tr -d '[:space:]')
