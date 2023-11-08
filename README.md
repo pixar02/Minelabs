@@ -2,7 +2,7 @@
 _A mod to add physics and chemistry to your life (and Minecraft)_
 
 This is the first version of the mod. We use the [Fabric](https://fabricmc.net) toolchain. For more info, visit [our website](https://minelabs.be/) or join our [Discord server](https://discord.com/invite/g3zMkEXzRN).
-
+PIERRE
 ## Contributing
 
 New content for the mod is discussed in brainstorm sessions and on [Discord](https://discord.com/invite/g3zMkEXzRN). We encourage everyone who wants to contribute to participate in thinking about new and interesting ways to bring science to Minecraft. Concrete ideas and features are organised in [Issues](https://github.com/ScicraftLearn/MineLabs/issues). These can be used to communicate and plan what you are working on.
