@@ -5,7 +5,7 @@ import be.minelabs.block.entity.LewisBlockEntity;
 import be.minelabs.recipe.lewis.LewisCraftingGrid;
 import be.minelabs.recipe.molecules.Bond;
 import be.minelabs.recipe.molecules.MoleculeGraph;
-import be.minelabs.inventory.OrderedInventory;
+import be.minelabs.OrderedInventory;
 import be.minelabs.screen.slot.CraftingResultSlot;
 import be.minelabs.screen.slot.FilteredSlot;
 import be.minelabs.screen.slot.LockableGridSlot;
