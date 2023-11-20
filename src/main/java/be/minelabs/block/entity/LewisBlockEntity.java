@@ -5,7 +5,7 @@ import be.minelabs.advancement.criterion.LCTCriterion;
 import be.minelabs.network.NetworkingConstants;
 import be.minelabs.recipe.lewis.LewisCraftingGrid;
 import be.minelabs.recipe.lewis.MoleculeRecipe;
-import be.minelabs.OrderedInventory;
+import be.minelabs.inventory.OrderedInventory;
 import be.minelabs.recipe.molecules.MoleculeGraph;
 import be.minelabs.screen.LewisBlockScreenHandler;
 import net.fabricmc.fabric.api.networking.v1.PacketByteBufs;

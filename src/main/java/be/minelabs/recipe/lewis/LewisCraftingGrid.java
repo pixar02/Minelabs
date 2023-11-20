@@ -4,7 +4,7 @@ import be.minelabs.science.Atom;
 import be.minelabs.recipe.molecules.Bond;
 import be.minelabs.recipe.molecules.MoleculeItemGraph;
 import be.minelabs.recipe.molecules.PartialMolecule;
-import be.minelabs.OrderedInventory;
+import be.minelabs.inventory.OrderedInventory;
 import be.minelabs.item.items.AtomItem;
 import net.minecraft.item.ItemStack;
 import net.minecraft.nbt.NbtList;
