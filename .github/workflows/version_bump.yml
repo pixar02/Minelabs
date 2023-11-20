@@ -1,4 +1,4 @@
-name: Update Version on Merge
+nname: Update Version on Merge
 
 on:
   pull_request:
@@ -30,7 +30,7 @@ jobs:
           echo "::set-output name=version::${merged_version}"
 
       - name: Run version update script
-        run: ./.github/scripts/update_version.sh "${{ steps.get_base_version.outputs.version }}" "${{ steps.get_merged_version.outputs.version }}"
+        run: ./.github/scripts/versioning.sh "${{ steps.get_base_version.outputs.version }}" "${{ steps.get_merged_version.outputs.version }}"
         shell: bash
 
       - name: Commit and push changes
