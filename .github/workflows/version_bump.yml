@@ -2,6 +2,8 @@ name: Update Version on Merge
 
 on:
   pull_request:
+    branches:
+      - main
     types:
       - closed
 
@@ -10,21 +12,21 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v3
+      - uses: actions/setup-java@v3
+        with:
+          distribution: temurin
+          java-version: 17
 
-      - name: Set up JDK
-        uses: actions/setup-java@v2
-
-      - name: Get base branch version
+      - name: Get main branch version
         id: get_base_version
-        run: echo "::set-output name=version::$(grep version gradle.properties | cut -d'=' -f2 | tr -d '[:space:]')"
+        run: echo "::set-output name=version::$(grep mod_version gradle.properties | cut -d'=' -f2 | tr -d '[:space:]')"
 
       - name: Get merged branch version
         id: get_merged_version
         run: |
           git checkout ${{ github.event.before }}
-          merged_version=$(grep version gradle.properties | cut -d'=' -f2 | tr -d '[:space:]')
+          merged_version=$(grep mod_version gradle.properties | cut -d'=' -f2 | tr -d '[:space:]')
           echo "::set-output name=version::${merged_version}"
 
       - name: Compare versions and update
