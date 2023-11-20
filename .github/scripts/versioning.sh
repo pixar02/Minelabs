@@ -13,11 +13,11 @@ IFS='.' read -ra mergeV <<< "$merge_version"
 function check() {
     for ((i=2; i>=0; i--)); do
         if (( ${mergeV[$i]} > ${mainV[$i]} )); then
-          echo "MERGE IS BIGGER"
+          echo "MERGE IS BIGGER" 
             return 0
         fi
     done
-    echo "nothing"
+    echo "nothing" 
     return 1
 }
 
