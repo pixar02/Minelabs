@@ -3,6 +3,10 @@
 main_version=$1
 merge_version=$2
 
+echo "$main_version"
+echo " | "
+echo "$merge_version"
+
 IFS='.' read -ra mainV <<< "$main_version"
 IFS='.' read -ra mergeV <<< "$merge_version"
 
@@ -17,14 +21,13 @@ check() {
     return 1
 }
 
-if [ $(check) == 1 ]; then
+if [ $(check) ]; then
   v=$((mainV[2] + 1))
   builder="${mainV[0]}.${mainV[1]}.$v"
   echo "auto: "
   echo "$builder"
   sed -i "s/mod_version=$main_version/mod_version=$builder/" gradle.properties
-else 
+else
     echo "merge"
-    echo "$merge_version" 
+    echo "$merge_version"
 fi
-
