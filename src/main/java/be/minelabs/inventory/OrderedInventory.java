@@ -1,4 +1,4 @@
-package be.minelabs;
+package be.minelabs.inventory;
 
 import com.mojang.datafixers.DataFixUtils;
 import net.minecraft.inventory.Inventories;
