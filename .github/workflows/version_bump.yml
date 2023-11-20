@@ -2,6 +2,8 @@ name: Update Version on Merge
 
 on:
   pull_request:
+    branches:
+      - main
     types:
       - closed
 
@@ -16,7 +18,7 @@ jobs:
           distribution: temurin
           java-version: 17
 
-      - name: Get base branch version
+      - name: Get main branch version
         id: get_base_version
         run: echo "::set-output name=version::$(grep mod_version gradle.properties | cut -d'=' -f2 | tr -d '[:space:]')"
 
