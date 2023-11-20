@@ -1,4 +1,4 @@
-nname: Update Version on Merge
+name: Update Version on Merge
 
 on:
   pull_request:
