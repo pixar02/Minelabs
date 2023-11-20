@@ -1,14 +1,11 @@
 #!/bin/bash
-
 set -x
-
 # Increment the version
 CURRENT_VERSION=$(grep "mod_version" gradle.properties | cut -d'=' -f2 | tr -d '[:space:]')
 IFS='.' read -ra VERSION_PARTS <<< "$CURRENT_VERSION"
 MAJOR="${VERSION_PARTS[0]}"
 MINOR="${VERSION_PARTS[1]}"
 PATCH="${VERSION_PARTS[2]}"
-
 ((PATCH++))
 NEW_VERSION="$MAJOR.$MINOR.$PATCH"
 
