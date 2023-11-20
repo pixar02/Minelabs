@@ -8,6 +8,7 @@ public class t {
         String[] mergeV = merge_version.split("\\.");
         if (check(mainV, mergeV) == 1) {
             int v = Integer.parseInt(mainV[2]) + 1;
+            // commentfor commit
             String builder = mainV[0] + "." + mainV[1] + "." + v;
             System.out.println("auto: ");
             System.out.println(builder);
