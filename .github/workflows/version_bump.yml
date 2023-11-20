@@ -17,31 +17,22 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
-
-      - name: Get main branch version
+          
+      - name: Get base branch version
         id: get_base_version
-        run: echo "::set-output name=version::$(grep mod_version gradle.properties | cut -d'=' -f2 | tr -d '[:space:]')"
+        run: echo "::set-output name=version::$(grep version gradle.properties | cut -d'=' -f2 | tr -d '[:space:]')"
 
       - name: Get merged branch version
         id: get_merged_version
         run: |
           git checkout ${{ github.event.before }}
-          merged_version=$(grep mod_version gradle.properties | cut -d'=' -f2 | tr -d '[:space:]')
+          merged_version=$(grep version gradle.properties | cut -d'=' -f2 | tr -d '[:space:]')
           echo "::set-output name=version::${merged_version}"
 
-      - name: Compare versions and update
-        run: |
-          base_version="${{ steps.get_base_version.outputs.version }}"
-          merged_version="${{ steps.get_merged_version.outputs.version }}"
-
-          if [[ "$base_version" == "$merged_version" ]]; then
-            new_version=$((merged_version + 1))
-            echo "Updating version to $new_version"
-            sed -i "s/version=$merged_version/version=$new_version/" gradle.properties
-          else
-            echo "Merged version is greater, keeping it."
-          fi
-
+      - name: Run version update script
+        run: ./.github/scripts/update_version.sh "${{ steps.get_base_version.outputs.version }}" "${{ steps.get_merged_version.outputs.version }}"
+        shell: bash
+        
       - name: Commit and push changes
         run: |
           git config user.name "${{ github.actor }}"
