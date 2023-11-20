@@ -12,9 +12,7 @@ IFS='.' read -ra mergeV <<< "$merge_version"
 
 check() {
     for ((i=2; i>=0; i--)); do
-        base="${mainV[$i]}"
-        merge="${mergeV[$i]}"
-        if ((merge > base)); then
+        if (("${mergeV[$i]}" > "${mainV[$i]}")); then
             return 0
         fi
     done
