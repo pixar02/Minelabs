@@ -15,9 +15,6 @@ jobs:
 
       - name: Set up JDK
         uses: actions/setup-java@v2
-        with:
-          distribution: 'adopt'
-          java-version: '11'
 
       - name: Get base branch version
         id: get_base_version
