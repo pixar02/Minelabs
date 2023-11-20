@@ -1,6 +1,7 @@
 package be.minelabs.advancement.criterion;
 
 import be.minelabs.Minelabs;
+import be.minelabs.advancement.NeighbourhoodCriterion;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParseException;
 import com.google.gson.JsonPrimitive;

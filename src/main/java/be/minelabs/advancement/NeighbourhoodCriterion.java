@@ -1,4 +1,4 @@
-package be.minelabs.advancement.criterion;
+package be.minelabs.advancement;
 
 import net.minecraft.advancement.criterion.AbstractCriterionConditions;
 import net.minecraft.entity.ai.TargetPredicate;
