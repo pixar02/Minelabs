@@ -17,7 +17,7 @@ jobs:
         with:
           distribution: temurin
           java-version: 17
-          
+
       - name: Get base branch version
         id: get_base_version
         run: echo "::set-output name=version::$(grep version gradle.properties | cut -d'=' -f2 | tr -d '[:space:]')"
@@ -32,7 +32,7 @@ jobs:
       - name: Run version update script
         run: ./.github/scripts/update_version.sh "${{ steps.get_base_version.outputs.version }}" "${{ steps.get_merged_version.outputs.version }}"
         shell: bash
-        
+
       - name: Commit and push changes
         run: |
           git config user.name "${{ github.actor }}"
