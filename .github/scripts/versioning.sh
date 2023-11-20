@@ -10,16 +10,18 @@ echo "$merge_version"
 IFS='.' read -ra mainV <<< "$main_version"
 IFS='.' read -ra mergeV <<< "$merge_version"
 
-check() {
+function check() {
     for ((i=2; i>=0; i--)); do
-        if (("${mergeV[$i]}" > "${mainV[$i]}")); then
+        if (( ${mergeV[$i]} > ${mainV[$i]} )); then
+          echo "MERGE IS BIGGER" 
             return 0
         fi
     done
+    echo "nothing" 
     return 1
 }
 
-if [ $(check) ]; then
+if [ check ]; then
   v=$((mainV[2] + 1))
   builder="${mainV[0]}.${mainV[1]}.$v"
   echo "auto: "
