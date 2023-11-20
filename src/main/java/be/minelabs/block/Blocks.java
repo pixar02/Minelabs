@@ -21,7 +21,7 @@ public class Blocks {
     public static final Block ATOM_FLOOR = register(new AtomicFloor(), "atomic_floor");
 
     //Portal block
-    public static final Block PORTAL_BLOCK = register(new PortalBlock(FabricBlockSettings.of(Material.DECORATION)), "portal_block");
+    //public static final Block PORTAL_BLOCK = regkister(new PortalBlock(FabricBlockSettings.of(Material.DECORATION)), "portal_block");
 
     public static final Block SALT_ORE = register(new ExperienceDroppingBlock(FabricBlockSettings.of(Material.STONE)
             .mapColor(MapColor.WHITE_GRAY).strength(3.0f, 3.0f).requiresTool(), UniformIntProvider.create(0, 3)), "salt/salt_ore");
