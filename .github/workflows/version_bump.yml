@@ -18,13 +18,13 @@ jobs:
 
       - name: Get base branch version
         id: get_base_version
-        run: echo "::set-output name=version::$(grep version gradle.properties | cut -d'=' -f2 | tr -d '[:space:]')"
+        run: echo "::set-output name=version::$(grep mod_version gradle.properties | cut -d'=' -f2 | tr -d '[:space:]')"
 
       - name: Get merged branch version
         id: get_merged_version
         run: |
           git checkout ${{ github.event.before }}
-          merged_version=$(grep version gradle.properties | cut -d'=' -f2 | tr -d '[:space:]')
+          merged_version=$(grep mod_version gradle.properties | cut -d'=' -f2 | tr -d '[:space:]')
           echo "::set-output name=version::${merged_version}"
 
       - name: Compare versions and update
