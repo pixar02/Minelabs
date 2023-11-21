@@ -1,5 +1,10 @@
 #!/bin/bash
 
+if [ "$#" -ne 2 ]; then
+    echo "Usage: $0 <main_version> <merge_version>"
+    exit 1
+fi
+
 main_version=$1
 merge_version=$2
 
