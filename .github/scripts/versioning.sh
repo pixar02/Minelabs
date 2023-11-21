@@ -3,10 +3,6 @@
 main_version=$1
 merge_version=$2
 
-echo "$main_version"
-echo " | "
-echo "$merge_version"
-
 IFS='.' read -ra mainV <<< "$main_version"
 IFS='.' read -ra mergeV <<< "$merge_version"
 
