@@ -22,7 +22,6 @@ function check() {
           return 0
         fi
     done
-    echo "nothing" 
     return 1
 }
 
