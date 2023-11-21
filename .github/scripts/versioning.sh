@@ -8,9 +8,8 @@ fi
 main_version=$1
 merge_version=$2
 
-echo "$main_version"
-echo " || "
-echo "$merge_version"
+echo "main version: $main_version"
+echo "branch version: $merge_version"
 
 IFS='.' read -ra mainV <<< "$main_version"
 IFS='.' read -ra mergeV <<< "$merge_version"
