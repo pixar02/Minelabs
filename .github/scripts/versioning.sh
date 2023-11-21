@@ -23,7 +23,7 @@ function check() {
     return 1
 }
 
-if [ check ]; then
+if check; then
   v=$((mainV[2] + 1))
   builder="${mainV[0]}.${mainV[1]}.$v"
   echo "auto: "
