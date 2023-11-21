@@ -12,14 +12,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/setup-java@v3
-        with:
-          distribution: temurin
-          java-version: 17
-
       - name: Get base branch version
         id: get_base_version
         run: echo "BASE_VERSION=$(grep mod_version gradle.properties | cut -d'=' -f2 | tr -d '[:space:]')" >> $GITHUB_ENV
+        
+      - uses: actions/checkout@v3
 
       - name: Get merged branch version
         id: get_merged_version
