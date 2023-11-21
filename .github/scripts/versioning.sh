@@ -3,11 +3,17 @@
 main_version=$1
 merge_version=$2
 
+echo "$main_version"
+echo " || "
+echo "$merge_version"
+
 IFS='.' read -ra mainV <<< "$main_version"
 IFS='.' read -ra mergeV <<< "$merge_version"
 
 function check() {
     for ((i=2; i>=0; i--)); do
+        echo "${mergeV[$i]}"
+        echo "${mainV[$i]}"
         if (( ${mergeV[$i]} > ${mainV[$i]} )); then
           echo "MERGE IS BIGGER" 
             return 0
