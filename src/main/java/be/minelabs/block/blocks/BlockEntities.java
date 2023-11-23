@@ -1,7 +1,8 @@
-package be.minelabs.block.entity;
+package be.minelabs.block.blocks;
 
 import be.minelabs.Minelabs;
 import be.minelabs.block.Blocks;
+import be.minelabs.block.entity.*;
 import be.minelabs.item.Items;
 import net.fabricmc.fabric.api.object.builder.v1.block.entity.FabricBlockEntityTypeBuilder;
 import net.minecraft.block.Block;
