@@ -14,6 +14,8 @@ public class MinelabsGameRules {
             "allowChemicalProjectiles", GameRules.Category.SPAWNING, GameRuleFactory.createBooleanRule(true));
     public static final GameRules.Key<GameRules.BooleanRule> ALLOW_DECAY = GameRuleRegistry.register(
             "allowDecay", GameRules.Category.UPDATES, GameRuleFactory.createBooleanRule(true));
+    public static final GameRules.Key<GameRules.IntRule> E_RADIUS = GameRuleRegistry.register("eRadius",
+            GameRules.Category.UPDATES, GameRuleFactory.createIntRule(12));
 
     public static void onInitialize() {
 
