@@ -6,8 +6,8 @@ on:
       - main
     types:
       - closed
-    paths:
-      - '!gradle.properties'
+    paths-ignore:
+      - 'gradle.properties'
 jobs:
   update-version:
     runs-on: ubuntu-latest
