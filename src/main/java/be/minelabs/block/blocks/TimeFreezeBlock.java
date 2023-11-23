@@ -1,6 +1,5 @@
 package be.minelabs.block.blocks;
 
-import be.minelabs.block.entity.BlockEntities;
 import be.minelabs.block.entity.ChargedBlockEntity;
 import be.minelabs.block.entity.TimeFreezeBlockEntity;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
