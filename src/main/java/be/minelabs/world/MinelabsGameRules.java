@@ -16,7 +16,8 @@ public class MinelabsGameRules {
             "allowDecay", GameRules.Category.UPDATES, GameRuleFactory.createBooleanRule(true));
     public static final GameRules.Key<GameRules.IntRule> E_RADIUS = GameRuleRegistry.register("eRadius",
             GameRules.Category.UPDATES, GameRuleFactory.createIntRule(12));
-
+    public static final GameRules.Key<GameRules.BooleanRule> CHARGED_DROPS_ON_BLOCKHIT = GameRuleRegistry.register(
+            "chargedDropsOnBlockhit", GameRules.Category.MISC, GameRuleFactory.createBooleanRule(false));
     public static void onInitialize() {
 
     }
