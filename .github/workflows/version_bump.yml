@@ -7,7 +7,7 @@ on:
     types:
       - closed
     paths:
-      - '!**gradle.properties'
+      - 'gradle.properties'
 jobs:
   update-version:
     runs-on: ubuntu-latest
