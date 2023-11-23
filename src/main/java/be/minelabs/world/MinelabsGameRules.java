@@ -9,6 +9,10 @@ public class MinelabsGameRules {
             "randomQuantumDrops", GameRules.Category.DROPS, GameRuleFactory.createBooleanRule(true));
     public static final GameRules.Key<GameRules.BooleanRule> BOHR_PROJECTILES = GameRuleRegistry.register(
             "bohrProjectiles", GameRules.Category.SPAWNING, GameRuleFactory.createBooleanRule(true));
+
+    public static final GameRules.Key<GameRules.BooleanRule> ALLOW_CHEMICAL_PROJECTILES = GameRuleRegistry.register(
+            "allowChemicalProjectiles", GameRules.Category.SPAWNING, GameRuleFactory.createBooleanRule(true));
+
     public static void onInitialize() {
 
     }
