@@ -1,6 +1,6 @@
 package be.minelabs.block.entity;
 
-import be.minelabs.block.blocks.BlockEntities;
+import be.minelabs.block.BlockEntities;
 import be.minelabs.block.blocks.MologramBlock;
 import be.minelabs.item.IMoleculeItem;
 import net.fabricmc.fabric.api.transfer.v1.item.InventoryStorage;

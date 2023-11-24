@@ -1,6 +1,6 @@
 package be.minelabs.block.entity;
 
-import be.minelabs.block.blocks.BlockEntities;
+import be.minelabs.block.BlockEntities;
 import be.minelabs.screen.ChargedPointBlockScreenHandler;
 import be.minelabs.util.Tags;
 import net.fabricmc.fabric.api.transfer.v1.item.InventoryStorage;

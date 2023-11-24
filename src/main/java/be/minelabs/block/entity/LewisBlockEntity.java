@@ -2,7 +2,7 @@ package be.minelabs.block.entity;
 
 import be.minelabs.advancement.criterion.Criteria;
 import be.minelabs.advancement.criterion.LCTCriterion;
-import be.minelabs.block.blocks.BlockEntities;
+import be.minelabs.block.BlockEntities;
 import be.minelabs.network.NetworkingConstants;
 import be.minelabs.recipe.lewis.LewisCraftingGrid;
 import be.minelabs.recipe.lewis.MoleculeRecipe;

@@ -1,6 +1,6 @@
 package be.minelabs.block.entity;
 
-import be.minelabs.block.blocks.BlockEntities;
+import be.minelabs.block.BlockEntities;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.entity.BlockEntity;
 import net.minecraft.item.Item;
