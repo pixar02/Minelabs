@@ -12,18 +12,23 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-
-      - name: Get mod version
+      - name: Get base branch version
         id: get_base_version
-        run: echo "VERSION=$(grep mod_version gradle.properties | cut -d'=' -f2 | tr -d '[:space:]')" >> $GITHUB_ENV
-
+        run: echo "BASE_VERSION=$(grep mod_version gradle.properties | cut -d'=' -f2 | tr -d '[:space:]')" >> $GITHUB_ENV
+      
+      - name: Get merged branch version
+        id: get_merged_version
+        run: |
+          git checkout ${{ github.event.before }}
+          echo "MERGED_VERSION=$(grep mod_version gradle.properties | cut -d'=' -f2 | tr -d '[:space:]')" >> $GITHUB_ENV
+      
       - name: Run version update script
-        run: ./.github/scripts/versioning.sh $VERSION
+        run: ./.github/scripts/versioning.sh $BASE_VERSION $MERGED_VERSION
         shell: bash
-
+      
       - name: Commit and push changes
         run: |
           git config user.name "${{ github.actor }}"
-          git config user.email "actions@github.com"
+          git config user.email "${{ github.actor }}@users.noreply.github.com"
           git commit -am "Update version" || true
           git push
