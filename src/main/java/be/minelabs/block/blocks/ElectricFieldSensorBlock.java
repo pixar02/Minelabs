@@ -1,5 +1,6 @@
 package be.minelabs.block.blocks;
 
+import be.minelabs.block.BlockEntities;
 import be.minelabs.block.entity.ElectricFieldSensorBlockEntity;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.BlockWithEntity;

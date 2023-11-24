@@ -1,4 +1,4 @@
-package be.minelabs.block.blocks;
+package be.minelabs.block;
 
 import be.minelabs.Minelabs;
 import be.minelabs.block.Blocks;
