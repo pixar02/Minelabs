@@ -1,6 +1,7 @@
 package be.minelabs.fluid;
 
 import be.minelabs.Minelabs;
+import be.minelabs.fluid.fluids.CCl4Fluid;
 import net.minecraft.fluid.FlowableFluid;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
