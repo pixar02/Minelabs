@@ -11,16 +11,19 @@ jobs:
     if: github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v4
+
       - name: Get merged branch version
         id: get_merged_version
         run: |
           git checkout ${{ github.event.before }}
           echo "MERGED_VERSION=$(grep mod_version gradle.properties | cut -d'=' -f2 | tr -d '[:space:]')" >> $GITHUB_ENV
 
-      - uses: actions/checkout@v3
       - name: Get base branch version
         id: get_base_version
-        run: echo "BASE_VERSION=$(grep mod_version gradle.properties | cut -d'=' -f2 | tr -d '[:space:]')" >> $GITHUB_ENV
+        run: |
+          git checkout ${{ github.sha}}
+          echo "BASE_VERSION=$(grep mod_version gradle.properties | cut -d'=' -f2 | tr -d '[:space:]')" >> $GITHUB_ENV
 
       - name: Run version update script
         run: ./.github/scripts/versioning.sh $BASE_VERSION $MERGED_VERSION
