@@ -1,6 +1,6 @@
 package be.minelabs.item.reaction;
 
-import be.minelabs.entity.CorrosiveEntity;
+import be.minelabs.entity.decoration.CorrosiveEntity;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.entity.effect.StatusEffectInstance;

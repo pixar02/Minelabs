@@ -1,6 +1,7 @@
 package be.minelabs.entity;
 
 import be.minelabs.Minelabs;
+import be.minelabs.entity.decoration.CorrosiveEntity;
 import be.minelabs.entity.decoration.painting.Paintings;
 import be.minelabs.entity.effect.Effects;
 import be.minelabs.entity.mob.BalloonEntity;
