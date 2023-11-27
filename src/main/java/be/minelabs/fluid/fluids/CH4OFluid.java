@@ -1,6 +1,8 @@
-package be.minelabs.fluid;
+package be.minelabs.fluid.fluids;
 
 import be.minelabs.block.Blocks;
+import be.minelabs.fluid.AbstractFluid;
+import be.minelabs.fluid.Fluids;
 import be.minelabs.item.Items;
 import net.minecraft.block.BlockState;
 import net.minecraft.fluid.Fluid;
