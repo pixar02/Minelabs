@@ -1,5 +1,6 @@
-package be.minelabs.entity;
+package be.minelabs.entity.decoration;
 
+import be.minelabs.entity.Entities;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.EntityType;
 import net.minecraft.nbt.NbtCompound;
